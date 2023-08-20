@@ -25,6 +25,14 @@ class WithdrawController extends Controller
             'amount' => 'required'
         ]);
 
+        if ($request->amount % 50000 != 0) {
+            return response()->json([
+                'success'   => "false",
+                'message'   => "Data gagal diinputkan amount harus berkelipatan Rp. 50.000",
+                'data'      => []
+            ], 400);
+        }
+
         CashFlow::create([
             'orderId'   => '1111111111desaes',
             'amount'    => $request->amount,

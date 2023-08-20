@@ -18,5 +18,12 @@ class DatabaseSeeder extends Seeder
             'email' => 'anggi@gmail.com',
             'password' => Hash::make('1234'),
         ]);
+
+        \App\Models\CashFlow::factory()->create([
+            'orderId' => 'Anggi',
+            'amount' => 'anggi@gmail.com',
+            'isDeposit' => Hash::make('1234'),
+            'userId' => Hash::make('1234'),
+        ]);
     }
 }

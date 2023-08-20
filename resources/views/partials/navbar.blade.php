@@ -17,7 +17,7 @@
             </li>
         </ul>
 
-        <ul class="navbar-nav ms-auto">
+        <!-- <ul class="navbar-nav ms-auto">
         @auth
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +37,7 @@
                 <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>
                     Login</a>
             </li>
-        @endauth
+        @endauth -->
         </ul>
         </div>
     </div>
