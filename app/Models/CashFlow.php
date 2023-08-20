@@ -9,6 +9,8 @@ class CashFlow extends Model
 {
     use HasFactory;
 
+    protected $table = 'cash_flows';
+
     /**
      * The attributes that are mass assignable.
      *
