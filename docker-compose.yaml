@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+
+  laravel-docker:
+    container_name: laravel-docker
+    build: .
+    volumes:
+      - ./laravel-app:/var/www/html
+    ports:
+      - 8000:8000
