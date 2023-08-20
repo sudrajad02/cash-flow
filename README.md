@@ -1,3 +1,7 @@
+# Cash-Flow laravel
+
+Cash Flow use laravel
+```bash
 # install dependencies
 $ composer install
 
