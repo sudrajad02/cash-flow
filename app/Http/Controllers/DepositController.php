@@ -45,6 +45,26 @@ class DepositController extends Controller
     }
 
     public function saveFromApi(Request $request) {
+        $token = $request->header('Authorization');
+
+        if (substr($token, 0, 7) !== 'Bearer ') {
+            return response()->json([
+                'success'   => "false",
+                'message'   => "Harus membawa credential",
+                'data'      => []
+            ], 401);
+        }
+
+        $token = request()->bearerToken();
+
+        if (base64_decode($token) != "Anggi Perdana Sudrajad") {
+            return response()->json([
+                'success'   => "false",
+                'message'   => "Token tidak sesuai",
+                'data'      => []
+            ], 401);
+        }
+
         $validator = Validator::make($request->all(), [
             'order_id'     => 'required|string',
             'amount'      => 'required|numeric',
